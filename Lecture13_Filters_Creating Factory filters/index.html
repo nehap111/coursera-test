@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp' lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>  body{font-size: 1.1em;}</style>
+    <title>Expression and Interpolation</title>
+  </head>
+  <body>
+    <h1>Expression and Interpolation</h1>
+    <div ng-controller ='MsgController'>
+        Origional : {{sayMessage()}} </br>
+        Loves : {{sayLovesMessage()}} </br>
+        Truth : {{sayLovesMessage() | truth : 'healthy' : 'cookie' }}</br>
+        Big Truth : {{sayLovesMessage() | truth : 'healthy' : 'cookie' | uppercase}}</br>
+
+      <div>
+        <button ng-click="feedJoy()">Feed Joy</button>
+        </br>
+
+        <img ng-src="images/joy_{{stateOfBeing}}.jpg">
+      </div>
+    </div>
+  </body>
+</html>
